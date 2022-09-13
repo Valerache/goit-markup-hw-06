@@ -795,7 +795,6 @@ img {
 
 .input-container {
   position: relative;
-  transition: var(--anim);
 }
 
 .input-icon {
@@ -803,6 +802,12 @@ img {
   top: 65%;
   left: 5%;
   transform: translate(-50%, -50%);
+  transition: var(--anim);
+}
+
+.input-icon:hover {
+  fill: var(--accent-cl);
+  cursor: pointer;
 }
 
 .input-box {
@@ -812,10 +817,18 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   cursor: pointer;
+  transition: var(--anim);
 }
 
-.input-box:hover {
+.input-box:hover,
+.input-box:focus {
   border: 1px solid var(--accent-cl);
+}
+ 
+.input-box:hover + .input-icon,
+.input-box:focus + .input-icon
+ {
+  fill: var(--accent-cl);
 }
 
 textarea {
