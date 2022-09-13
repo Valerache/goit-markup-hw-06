@@ -637,37 +637,40 @@
 
         <form class="register-form" name="register-form">
           <strong class="register-form-title">Залиште свої дані, ми вам передзвонимо</strong>
-          <label class="label">
-            <span class="text">Ім'я</span>
-            <div class="input-container">
+          <div class="input-container">
+            <label class="label">
+              <span class="text">Ім'я</span>
               <svg class="input-icon" width="18" height="18">
                 <use href="./images/icons.svg#person-in"></use>
               </svg>
-              <input class="input-box" placeholder="" type="text" autofocus/>
-            </div>
-          </label>
-          <label class="label">
-            <span class="text">Телефон</span>
-            <div class="input-container">
+              <input class="input-box" placeholder="" type="text" />
+            </label>
+          </div>
+          <div class="input-container">
+            <label class="label">
+              <span class="text">Телефон</span>
               <svg class="input-icon" width="18" height="18">
                 <use href="./images/icons.svg#phone-in"></use>
               </svg>
-              <input class="input-box" placeholder="" type="phone" />
-            </div>
-          </label>
-          <label class="label">
-            <span class="text">Пошта</span>
-            <div class="input-container">
+              <input class="input-box" placeholder="" type="tel" />
+            </label>
+          </div>
+          <div class="input-container">
+            <label class="label">
+              <span class="text">Пошта</span>
               <svg class="input-icon" width="18" height="18">
                 <use href="./images/icons.svg#email-in"></use>
               </svg>
               <input class="input-box" placeholder="" type="email" />
-            </div>
-          </label>
+            </label>
+          </div>
+          <div class="input-container">
           <label class="label">
             <span class="text">Коментар</span>
-            <textarea class="textarea" placeholder="Введіть текст" name="" rows="5"></textarea>
+            <textarea class="textarea" placeholder="Введіть текст" rows="5" rez></textarea>
           </label>
+          </div>
+          <div class="input-container text-check">
           <label class="label-check">
             <input type="checkbox" />
             <span class="check-text"
@@ -675,6 +678,7 @@
               <a class="check-text-accent" href="">Умови договору</a></span
             >
           </label>
+          </div>
           <div class="form-btn-box">
             <button class="modal-form-btn" type="submit">Відправити</button>
           </div>
