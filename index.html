@@ -634,26 +634,47 @@
             <use href="./images/icons.svg#close"></use>
           </svg>
         </button>
-        <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
-        <form action="">
-          <label for="">
-            Ім'я
-            <input placeholder="r" type="text" />
+
+        <form class="register-form" name="register-form">
+          <strong class="register-form-title">Залиште свої дані, ми вам передзвонимо</strong>
+          <label class="label">
+            <span class="text">Ім'я</span>
+            <div class="input-container">
+              <svg class="input-icon" width="18" height="18">
+                <use href="./images/icons.svg#person-in"></use>
+              </svg>
+              <input class="input-box" placeholder="" type="text" autofocus/>
+            </div>
           </label>
-          Телефон
-          <label for="">
-            <input placeholder="g" type="phone" />
+          <label class="label">
+            <span class="text">Телефон</span>
+            <div class="input-container">
+              <svg class="input-icon" width="18" height="18">
+                <use href="./images/icons.svg#phone-in"></use>
+              </svg>
+              <input class="input-box" placeholder="" type="phone" />
+            </div>
           </label>
-          <label for="">
-            Пошта
-            <input placeholder="b" type="email" />
+          <label class="label">
+            <span class="text">Пошта</span>
+            <div class="input-container">
+              <svg class="input-icon" width="18" height="18">
+                <use href="./images/icons.svg#email-in"></use>
+              </svg>
+              <input class="input-box" placeholder="" type="email" />
+            </div>
           </label>
-          <label for="">
-            Коментар
-            <textarea placeholder="Введіть текст" name="" rows="5"> </textarea>
+          <label class="label">
+            <span class="text">Коментар</span>
+            <textarea class="textarea" placeholder="Введіть текст" name="" rows="5"></textarea>
           </label>
-          <input type="checkbox" />
-          Погоджуюся з розсилкою та приймаю Умови договору
+          <label class="label-check">
+            <input type="checkbox" />
+            <span class="check-text"
+              >Погоджуюся з розсилкою та приймаю
+              <a class="check-text-accent" href="">Умови договору</a></span
+            >
+          </label>
           <div class="form-btn-box">
             <button class="modal-form-btn" type="submit">Відправити</button>
           </div>

@@ -18,7 +18,7 @@
   /* Others */
   --fill-cl: #afb1b8;
 
-  --anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --anim: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -721,7 +721,6 @@ img {
   padding-left: 16px;
 }
 
-
 /* Modal window */
 
 .backdrop.is-hidden {
@@ -765,34 +764,97 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: var(--light-txt-cl);
+  cursor: pointer;
+  transition: var(--anim);
 }
 
-.modal-title {
+.modal-btn:hover {
+  fill: var(--accent-cl);
+}
+
+.register-form-title {
+  display: block;
+  margin-bottom: 12px;
   font-size: 20px;
-line-height: calc(23 / 20);
-text-align: center;
-letter-spacing: 0.03em;
+  line-height: calc(23 / 20);
+  text-align: center;
+  letter-spacing: 0.03em;
 
-color: var(--main-txt-cl);
+  color: var(--main-txt-cl);
 }
 
-label {
+.label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
-textarea {
-  resize: none;
+.label:nth-last-child(3) {
+  margin-bottom: 20px;
+}
+
+.input-container {
+  position: relative;
+  transition: var(--anim);
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+}
+
+.input-box {
+  width: 448px;
+  height: 40px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+}  
+
+.input-icon:hover,
+.input-icon:focus,
+.input-box:hover,
+.input-box:focus {
+  border: 1px solid var(--accent-cl);
+  fill: var(--accent-cl);
+}
+
+.textarea {
+  padding: 12px 16px;
+}
+
+.label-check {
+  margin-left: 8px;
+}
+
+.check-text {
+  margin-left: 4px;
+  color: var(--scn-txt-cl);
+}
+
+.check-text-accent {
+  color: var(--accent-cl);
+}
+
+.text {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  color: var(--scn-txt-cl);
 }
 
 .form-btn-box {
   display: flex;
   justify-content: center;
+  margin-top: 40px;
 }
 
- .modal-form-btn {
-  padding: 10px 32px;
+.modal-form-btn {
+  padding: 10px 52px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 0;
@@ -802,4 +864,5 @@ textarea {
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
- }
+  cursor: pointer;
+}
