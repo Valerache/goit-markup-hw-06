@@ -670,9 +670,13 @@
             <textarea class="textarea" placeholder="Введіть текст" rows="5"></textarea>
           </label>
           </div>
-          <div class="input-container text-check">
-          <label class="label-check">
-            <input class="checkbox" type="checkbox" name="check"/>
+          <div class="input-container">
+          <label class="label-check text-check">
+            <input class="checkbox visually-hidden"  type="checkbox" name="check"/>
+            <svg class="icon-check" width="16" height="15">
+              <use class="icon-checked" href="./images/icons.svg#checked"></use>
+              <use class="icon-unchecked" href="./images/icons.svg#unchecked"></use>
+            </svg>
             <span class="check-text"
               >Погоджуюся з розсилкою та приймаю
               <a class="check-text-accent" href="">Умови договору</a></span

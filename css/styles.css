@@ -18,7 +18,7 @@
   /* Others */
   --fill-cl: #afb1b8;
 
-  --anim: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -797,10 +797,8 @@ img {
 
 .input-container {
   margin-bottom: 10px;
-}
-
-.input-container {
   position: relative;
+  
 }
 
 .input-icon {
@@ -857,23 +855,27 @@ textarea {
   border: 1px solid var(--accent-cl);
 }
 
-.checkbox {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  position: absolute;
+.icon-checked {
+  opacity: 0;
+  transition: opacity var(--anim);
 }
 
-.label-check::before {
-  content: ' ';
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-color: #2196f3;
+.checkbox:checked + .icon-check .icon-checked {
+  opacity: 1;
+}
+.icon-unchecked {
+  transition: opacity var(--anim);
+}
+
+.checkbox:checked + .icon-check .icon-unchecked {
+  opacity: 0;
 }
 
 .text-check {
-  padding-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
   margin-bottom: 30px;
 }
 
